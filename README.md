@@ -1,4 +1,4 @@
-# STEP-Academy-C-
+# STEP-Academy
 First Home Work
 
-Trying to make some Commit changes
+Trying to make some Changes
