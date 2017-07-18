@@ -1,0 +1,157 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ToDoFirst();
+            Console.ReadLine();
+
+            ToDoSecond();
+            Console.ReadLine();
+
+            ToDoThird();
+            Console.ReadLine();
+
+            ToDoFourth();
+            Console.ReadLine();
+
+            ToDoFifth();
+            Console.ReadLine();
+
+            ToDoSixth();
+            Console.ReadLine();
+
+            ToDoSeventh();
+            Console.ReadLine();
+
+            ToDoEighth();
+            Console.ReadLine();
+        }
+        static void ToDoFirst()
+        {
+           int a=7;
+           int b = -3;
+           int c = 4;
+
+            Console.WriteLine("Input argument");
+            int argument = Int32.Parse(Console.ReadLine());
+
+
+            int solution = a * argument * argument + b * argument +c;
+            Console.WriteLine("Solution= " + solution);
+        }
+
+        static void ToDoSecond()
+        {
+            int coefficient = 2;
+
+            Console.WriteLine("Input radius");
+            int radius = Int32.Parse(Console.ReadLine());
+
+            double area = Math.PI * radius * radius;
+            double circuit = coefficient * Math.PI * radius;
+
+            Console.WriteLine("Area= " + area);
+            Console.WriteLine("Circuit= " + circuit);
+        }
+
+        static void ToDoThird()
+        {
+            int rateOfMeter = 100;
+
+            Console.WriteLine("Input length");
+            int centimetres = Int32.Parse(Console.ReadLine());
+
+            int meters = centimetres/ rateOfMeter;
+
+            Console.WriteLine("Length in meters= " + meters);
+        }
+
+        static void ToDoFourth()
+        {
+            int rateOfWeek = 7;
+
+            int days = 234;
+            int weeks = days/ rateOfWeek;
+
+            Console.WriteLine("Full weeks past= " + weeks);
+        }
+
+        static void ToDoFifth()
+        {
+            int rateOfDecade = 10;
+
+            Console.WriteLine("Input number");
+            int number = Int32.Parse(Console.ReadLine());
+
+            int decades = number / rateOfDecade;
+
+            int unit = number % 10;
+
+            int sumOfDigits = decades + unit;
+
+            int productOfDigits = decades * unit;
+
+            Console.WriteLine("Decades in number= " + decades);
+            Console.WriteLine("Unit in number= " + unit);
+            Console.WriteLine("Sum Of Digits= " + sumOfDigits);
+            Console.WriteLine("Product Of Digits= " + productOfDigits);
+        }
+
+        static void ToDoSixth()
+        {
+            int rateOfDecade = 10;
+            int rateOfHundred = 100;
+            int rateOfThousand = 1000;
+
+            Console.WriteLine("Input number");
+            int number = Int32.Parse(Console.ReadLine());
+
+            int sumOfDigits = (number % rateOfDecade) + ((number / rateOfDecade) % rateOfDecade) + ((number / rateOfHundred) % rateOfDecade) + (number / rateOfThousand);
+            int productOfDigits = (number % rateOfDecade) * ((number / rateOfDecade) % rateOfDecade) * ((number / rateOfHundred) % rateOfDecade) * (number / rateOfThousand);
+
+            Console.WriteLine("Sum Of Digits= " + sumOfDigits);
+            Console.WriteLine("Product Of Digits= " + productOfDigits);
+        }
+
+        static void ToDoSeventh()
+        {
+            int rateOfDecade = 10;
+            int rateOfHundred = 100;
+            int givenResult = 456;
+
+            int pulledDiget = givenResult % rateOfDecade;
+
+            int givenHundred = givenResult / rateOfHundred;
+
+            int givenDecade = (givenResult / rateOfDecade) % rateOfDecade;
+
+            int desirableNumber = givenHundred * rateOfHundred + pulledDiget * rateOfDecade + givenDecade;
+
+            Console.WriteLine("Desirable Number= " + desirableNumber);
+        }
+        static void ToDoEighth()
+        {
+            Console.WriteLine("Input First Argument");
+            bool firstArgument=Boolean.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input Second Argument");
+            bool secondArgument= Boolean.Parse(Console.ReadLine()); ;
+
+            bool firstTask = (!firstArgument) && (!secondArgument);
+            bool secondTask = firstArgument||((!firstArgument) && secondArgument);
+            bool thirdTask = ((!firstArgument) && (secondArgument))|| secondArgument;
+
+            Console.WriteLine("First Task= " + firstTask);
+            Console.WriteLine("Second Task= " + secondTask);
+            Console.WriteLine("Third Task= " + thirdTask);
+        }
+    }
+}
