@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    public class ZooShop
+    {
+        private string nameOfType;
+        private string gender;
+        private string nameOfAnimal;
+        private double price;
+        private int count;
+
+        public ZooShop()
+        {
+            nameOfType = "None type";
+            gender = "Not indicated";
+            nameOfAnimal = "Nameless";
+            price = 0;
+            count = 0;
+        }
+
+        static ZooShop()
+        {
+
+        }
+        public ZooShop(string nameOfType, string gender, string nameOfAnimal, double price, int count)
+        {
+            this.nameOfType = nameOfType;
+            this.gender = gender;
+            this.nameOfAnimal = nameOfAnimal;
+            this.price = price;
+            this.count = count;
+        }
+
+        public void SetNameOfType(string nameOfType) {
+            this.nameOfType = nameOfType;
+        }
+        public void SetGenderOfType(string  gender)
+        {
+            this.gender = gender;
+        }
+        public void SetNameOfAnimal(string nameOfAnimal)
+        {
+            this.nameOfAnimal = nameOfAnimal;
+        }
+        public void SetPriceOfAnimal(double price)
+        {
+            this.price = price;
+        }
+        public void SetCountOfAnimal(int count)
+        {
+            this.count = count;
+        }
+        public string GetNameOfType() {
+            Console.WriteLine("Type of animal: " + nameOfType);
+            return nameOfType;
+        }
+        public string GetNameOfAnimal()
+        {
+            Console.WriteLine("Name of animal: " + nameOfAnimal);
+            return nameOfAnimal;
+        }
+        public string GetGenderOfAnimal()
+        {
+            Console.WriteLine("Gender of animals: " + gender);
+            return gender;
+        }
+        public double GetPriceOfAnimal()
+        {
+            Console.WriteLine("Price of animals: " + price);
+            return price;
+        }
+        public int GetCountOfAnimal()
+        {
+            Console.WriteLine("Count of animals: " + count);
+            return count;
+        }
+
+        public void ShowAllInfornation() {
+            GetNameOfType();
+            GetGenderOfAnimal();
+            GetNameOfAnimal();
+            GetPriceOfAnimal();
+            GetCountOfAnimal();
+            Console.WriteLine();
+        }
+    }
+    // ref - переменная с которой используется ключевое слово ref обязательно должна быть инициализирована перед выполнением какого-либо действия
+    // out -
+}
