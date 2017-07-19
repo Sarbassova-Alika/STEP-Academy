@@ -1,0 +1,273 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ToDoFirst();
+            Console.ReadLine();
+
+            ToDoSecond();
+            Console.ReadLine();
+
+            ToDoThird();
+            Console.ReadLine();
+
+            ToDoFourth();
+            Console.ReadLine();
+
+            ToDoFifth();
+            Console.ReadLine();
+
+            ToDoSixth();
+            Console.ReadLine();
+
+            ToDoSeventh();
+            Console.ReadLine();
+
+            ToDoEighth();
+            Console.ReadLine();
+
+            ToDoNinth();
+            Console.ReadLine();
+
+            ToDoTenth();
+            Console.ReadLine();
+        }
+        static void ToDoFirst()
+        {
+            Console.WriteLine("Input arguments");
+            int firstNumber = Int32.Parse(Console.ReadLine());
+            int secondNumber = Int32.Parse(Console.ReadLine());
+            int thirdNumber = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine(firstNumber +" "+secondNumber+" "+thirdNumber );
+        }
+
+        static void ToDoSecond()
+        {
+            int firstNumber =5;
+            int secondNumber = 10;
+            int thirdNumber = 21;
+
+            Console.WriteLine(firstNumber);
+            Console.WriteLine(secondNumber);
+            Console.WriteLine(thirdNumber);
+        }
+
+        static void ToDoThird()
+        {
+            int rateOfMeter = 100;
+
+            Console.WriteLine("Input length");
+            int centimetres = Int32.Parse(Console.ReadLine());
+
+            int meters = centimetres / rateOfMeter;
+
+            Console.WriteLine("Length in meters= " + meters);
+        }
+
+        static void ToDoFourth()
+        {
+            int rateOfWeek = 7;
+
+            int days = 234;
+            int weeks = days / rateOfWeek;
+
+            Console.WriteLine("Full weeks past= " + weeks);
+        }
+
+        static void ToDoFifth()
+        {
+            int rateOfDecade = 10;
+
+            Console.WriteLine("Input number");
+            int number = Int32.Parse(Console.ReadLine());
+
+            int decades = number / rateOfDecade;
+
+            int unit = number % 10;
+
+            int sumOfDigits = decades + unit;
+
+            int productOfDigits = decades * unit;
+
+            Console.WriteLine("Decades in number= " + decades);
+            Console.WriteLine("Unit in number= " + unit);
+            Console.WriteLine("Sum Of Digits= " + sumOfDigits);
+            Console.WriteLine("Product Of Digits= " + productOfDigits);
+        }
+
+        static void ToDoSixth()
+        {
+            bool firstArgument = true;//firstArgument==A
+            bool secondArgument = false;//secondArgument==B
+            bool thirdArgument = false;//thirdArgument==C
+
+            bool firstTask = firstArgument || secondArgument;
+            bool secondTask = firstArgument && secondArgument;
+            bool thirdTask = secondArgument||thirdArgument;
+
+            Console.WriteLine("First Task= " + firstTask);
+            Console.WriteLine("Second Task= " + secondTask);
+            Console.WriteLine("Third Task= " + thirdTask);
+        }
+
+        static void ToDoSeventh()
+        {
+            Console.WriteLine("Input radius");
+            int radius = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input side of square");
+            int side = Int32.Parse(Console.ReadLine());
+
+            double areaOfCircle = Math.PI * radius * radius;
+            int areaOfSquare = side * side;
+
+            Console.WriteLine("Area Of Circle= " + areaOfCircle);
+            Console.WriteLine("Area Of Square= " + areaOfSquare);
+
+            if (areaOfCircle > areaOfSquare)
+            {
+                Console.WriteLine("Area Of Circle is bigger than Area of Square ");
+            }
+            else {
+                Console.WriteLine("Area Of Square is bigger than Area of Circle ");
+            }
+        }
+        static void ToDoEighth()
+        {
+            Console.WriteLine("Input capacity of first body");
+            int firstCapacity = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input mass of first body");
+            int firstMass = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input capacity of second body");
+            int secondCapacity = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input mass of second body");
+            int secondMass = Int32.Parse(Console.ReadLine());
+
+            double firstDensity = firstMass / firstCapacity;
+            double secondDensity = secondMass / secondCapacity;
+
+            if (firstDensity == secondDensity)
+            {
+                Console.WriteLine("Density of both bodies are equal");
+            }
+            else {
+                if (firstDensity > secondDensity)
+                {
+                    Console.WriteLine("Density of first body is bigger than second`s");
+                }
+                else {
+                    Console.WriteLine("Density of second body is bigger than first`s");
+                }
+            }
+        }
+        static void ToDoNinth() {
+            Console.WriteLine("Input resistance of first part");
+            int firstResistance = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input tension of first part");
+            int firstTension = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input resistance of second part");
+            int secondResistance = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input tension of second part");
+            int secondTension = Int32.Parse(Console.ReadLine());
+
+            double firstAmperage = firstTension / firstResistance;
+            double secondAmperage = secondTension / secondResistance;
+
+            if (firstAmperage == secondAmperage)
+            {
+                Console.WriteLine("Amperage in both parts are equal");
+            }
+            else
+            {
+                if (firstAmperage > secondAmperage)
+                {
+                    Console.WriteLine("Amperage in first part is bigger than second`s");
+                }
+                else
+                {
+                    Console.WriteLine("Amperage in second part is bigger than first`s");
+                }
+            }
+        }
+
+        static void ToDoTenth() {
+            Console.WriteLine("First");
+
+            for (int i = 20; i <= 35; i++) {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Second");
+
+            Console.WriteLine("Input argument that bigger than 10");
+            int firstNumber = Int32.Parse(Console.ReadLine());
+
+            if (firstNumber <= 10) {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                for (int i = 10; i <= firstNumber; i++) {
+                    long secondPower = i * i;
+                    Console.WriteLine(secondPower);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Third");
+
+            Console.WriteLine("Input argument that less than 50");
+            int secondNumber = Int32.Parse(Console.ReadLine());
+
+            if (secondNumber >= 50)
+            {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                for (int i = secondNumber; i<=50; i++)
+                {
+                    long thirdPower = i * i * i;
+                    Console.WriteLine(thirdPower);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Fourth");
+
+            Console.WriteLine("Input first argument");
+            int firstArgument = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Input second argument");
+            int secondArgument = Int32.Parse(Console.ReadLine());
+
+            if (firstArgument >= secondArgument)
+            {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                for (int i = firstArgument; i <= secondArgument; i++)
+                {                    
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
+}
